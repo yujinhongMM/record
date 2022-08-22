@@ -1,18 +1,24 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  import { nextTick, reactive, computed } from 'vue';
+  const author = reactive({
+    name: 'John Doe',
+    books: [
+      'Vue 2 - Advanced Guide',
+      'Vue 3 - Basic Guide',
+      'Vue 4 - The Mystery'
+    ]
+  })
+  // 一个计算属性ref
+  const publishedBooksMessage = computed (() => {
+    return author.books.length > 0 ? 'Yes' : 'No'
+  })
 </script>
 
 <template>
-  <header>
-    模板
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <p>Hashpublishedbooks：</p>
+  <span>{{ publishedBooksMessage }}</span>
 </template>
-
+  
 <style scoped>
 
 </style>
