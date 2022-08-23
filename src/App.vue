@@ -1,22 +1,22 @@
-<script setup>
-  import { nextTick, reactive, computed } from 'vue';
-  const author = reactive({
-    name: 'John Doe',
-    books: [
-      'Vue 2 - Advanced Guide',
-      'Vue 3 - Basic Guide',
-      'Vue 4 - The Mystery'
-    ]
+<script setup lang="ts">
+  import { provide, ref, onMounted  } from 'vue';
+  import Main from '@/components/Main.vue';
+  import Header from '@/components/Header.vue';
+  import { globalKey } from '@/assets/symbol.ts';
+
+  const globalValue = ref(null)
+  
+  provide(globalKey, globalValue);
+
+  onMounted(() => {
+    fetch('https://www.fastmock.site/mock/d75f9145f96813a6716231c1765c9e2b/record/global',  { method: 'GET', mode: 'cors'  }).then(res => console.log(res)).then(res => console.log(res))
   })
-  // 一个计算属性ref
-  const publishedBooksMessage = computed (() => {
-    return author.books.length > 0 ? 'Yes' : 'No'
-  })
+
 </script>
 
 <template>
-  <p>Hashpublishedbooks：</p>
-  <span>{{ publishedBooksMessage }}</span>
+  <Header></Header>
+  <Main></Main>
 </template>
   
 <style scoped>
