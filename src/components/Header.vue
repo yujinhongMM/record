@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { inject } from 'vue';
-import { globalKey } from '@/assets/symbol';
-const globalValue = inject<object>(globalKey, {});
+import { globalKey } from '@/data/symbol';
+import { Theme } from '@/data/constant';
+const globalValue = inject<object>(globalKey);
+
 const changeTheme = () => {
-  globalValue.value.theme = 'dark';
+  globalValue.value.theme = globalValue.value.theme === Theme.Light ? Theme.Dark :  Theme.Light;
 }
 </script>
 

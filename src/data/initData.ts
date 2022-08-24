@@ -1,0 +1,5 @@
+
+
+const globalValue = {
+    theme: 
+}
