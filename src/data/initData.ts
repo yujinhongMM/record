@@ -1,5 +1,7 @@
+import { Theme, Language } from "./constant";
 
 
-const globalValue = {
-    theme: 
+export const globalValueDefault = {
+    theme: Theme.Light,
+    language: Language.CN,
 }
