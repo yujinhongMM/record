@@ -15,12 +15,50 @@
 </script>
 
 <template>
-  {{ globalValue.theme }}
-  <button @click="changeTheme">切换主题</button>
-  {{ langValue?.['menu.englishStudy']}}
-  <button @click="changeLang">切换中英文</button>
+  <header>
+    <nav>
+      <hgroup>yujinhongMM</hgroup>
+      <li>{{ langValue?.['menu.englishStudy']}}</li>
+      <li>{{ langValue?.['menu.englishStudy']}}</li>
+      <li>{{ langValue?.['menu.englishStudy']}}</li>
+      <li>{{ langValue?.['menu.englishStudy']}}</li>
+      <li>{{ langValue?.['menu.englishStudy']}}</li>
+    </nav>
+    <div class="setting">
+      <div>按钮1</div>
+      <div>按钮2</div>
+    </div>
+  </header>
 </template>
   
-<style scoped>
-
+<style lang='less' scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0px 1px 0 rgb(0 0 0 / 5%);
+  transition: all .08s;
+  font-weight: 400;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #fff;
+  nav {
+    display: flex;
+    align-items: center;
+    hgroup {
+      margin-right: 2rem;
+      font-size: 1.25rem;
+    }
+    li {
+      display: block;
+      padding: 0.8rem 1rem;
+    }
+  }
+  .setting {
+    display: flex;
+  }
+}
 </style>
