@@ -10,12 +10,15 @@
   
 <style lang='less' scoped>
     .main {
-        padding-top: 3.5rem;
+        overflow: hidden;
+        padding-top: 2rem;
         margin: auto;
-    }
-    @media (min-width: 992px) {
-        .main {
+        @media (min-width: 992px) {
             width: 90%;
         }
+        @media (max-width: 992px) {
+            width: 95%;
+        }
     }
+    
 </style>
