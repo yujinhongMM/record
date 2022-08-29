@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { provide, ref, onMounted, reactive, watch  } from 'vue';
-  import Main from '@/components/Main.vue';
-  import Header from '@/components/Header.vue';
+  import Main from '@/layout/Main.vue';
+  import Header from '@/layout/Header.vue';
   import request from '@/service/request.ts';
   import LANG from '@/assets/lang';
   import { globalKey, langKey } from '@/data/symbol.ts';
