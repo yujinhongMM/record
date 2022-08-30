@@ -19,7 +19,7 @@
   })
 
   onMounted(async () => {
-    const data = await request('https://www.fastmock.site/mock/d75f9145f96813a6716231c1765c9e2b/record/global', { method: 'GET', mode: 'cors'  });
+    const data = await request('/global', { method: 'GET', mode: 'cors'  });
     globalValue.value = data;
     console.log(data);
   })

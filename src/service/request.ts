@@ -30,9 +30,11 @@ const defaultOption: OptionInter = {
     mode: 'cors'
 }
 
+const BASE_URL = 'https://www.fastmock.site/mock/d75f9145f96813a6716231c1765c9e2b/record';
+
 const request: RequestFunInter = async (url, options = defaultOption) => {
     try {
-        const res = await fetch(url, options);
+        const res = await fetch(`${BASE_URL}${url}`, options);
         const { status } = res;
         if (status !== 200) {
             throw '接口错误';
