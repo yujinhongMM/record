@@ -24,7 +24,23 @@ export enum Language {
      */
     EN = 'EN'
 }
-
+/**
+ * ArticleType 文章类型
+ */
+export enum ArticleType {
+    /**
+     * 英语学习
+     */
+    EnglishStudy,
+    /**
+     * 组件轮子
+     */
+    ComponentWheel,
+    /**
+     * bug
+     */
+    Bug
+}
 /**
  * 初始化值
  */

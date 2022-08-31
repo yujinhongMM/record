@@ -21,7 +21,6 @@
   onMounted(async () => {
     const data = await request('/global', { method: 'GET', mode: 'cors'  });
     globalValue.value = data;
-    console.log(data);
   })
 
 

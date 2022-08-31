@@ -28,7 +28,6 @@
         justify-content: space-between;
         align-items: center;
         background-color: #e8f3ec;
-        animation: bounceInLeft 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;
         .left {
             padding: 0 4% 1rem 8%;
             .title {

@@ -2,6 +2,7 @@ export default [
     {
         url: '',
         title: '英语学习',
+        type: '1',
         comp: '',
     },
     {
