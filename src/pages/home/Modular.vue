@@ -1,10 +1,13 @@
 <script setup lang="ts">
-    import { ref, onMounted, Ref } from 'vue';
+    import { ref, onMounted, Ref, inject } from 'vue';
     import request from '@/service/request.ts';
     import Icon0SVG from '@/assets/svg/icon0.vue';
     import Icon1SVG from '@/assets/svg/icon1.vue';
     import Rainbow from '@/assets/svg/rainbow.vue';
     import { ArticleInter } from '@/data/constant';
+    import { GlobalDataInter } from '@/data/constant';
+    import { globalKey } from '@/data/symbol';
+    const globalValue = inject<GlobalDataInter>(globalKey);
     const list: Ref<ArticleInter[]> = ref([]);
     onMounted(async () => {
         const data = await request('/new/list', { method: 'GET', mode: 'cors'  });
@@ -14,7 +17,7 @@
     
 <template>
     <div class="modular">
-        <img class="left" src="https://img0.baidu.com/it/u=2299704842,2935196786&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1661965200&t=07e9ae2d8aaaedcac478ba6666acd764"/>
+        <img class="left" :src="globalValue?.modular?.url"/>
         <div class="right">
             <div class="tab">
                 <h4>最新发表</h4>

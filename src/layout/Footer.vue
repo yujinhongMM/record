@@ -23,7 +23,7 @@
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-        padding: 1rem 0;
+        padding: 1.2rem 0;
         color: #ced4da;
         border-top: 1px solid #ced4da;
         @media (min-width: @screen-width) {

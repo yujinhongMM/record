@@ -14,7 +14,7 @@
         margin: auto;
         @media (min-width: @screen-width) {
             width: 90%;
-            padding: 4rem 0 6rem;
+            padding: 4rem 0 7rem;
         }
         @media (max-width: @screen-width) {
             width: 95%;
