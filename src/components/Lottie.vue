@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import animationData from "@/assets/lottie/animation1.json";
     import { ref, onMounted } from 'vue';
     import lottie from "lottie-web"; 
     const props = defineProps<{

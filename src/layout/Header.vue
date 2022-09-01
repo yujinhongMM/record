@@ -30,7 +30,7 @@
             <li>{{ langValue?.['menu.componentWheel'] }}</li>
             <li>{{ langValue?.['menu.bug'] }}</li>
           </nav>
-          <Button @click="changeLang" type="greenNoBorder">{{ langValue?.['button.languageChange'] }}</Button>
+          <Button @click="changeLang" type="greenNoBorder" className="button">{{ langValue?.['button.languageChange'] }}</Button>
         </ul>
         <MenuSVG class='menuSvg' @click="menu"/>
       </div>
@@ -108,6 +108,9 @@ header {
       @media (max-width: @screen-width) {
         display: block;
       }
+    }
+    .button {
+      display: block;
     }
     .show {
       @media (max-width: @screen-width) {

@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import './assets/resize'
+import './assets/js/disableScaling'
 import './assets/styles/main.css'
 
 /**
