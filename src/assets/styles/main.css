@@ -23,6 +23,17 @@ body {
     background-color: #fff; 
     position: relative;
 }
+
+button{
+    /*消除button的默认样式*/
+    /*这种写法是对所有的button标签同时生效*/
+    margin: 0px;
+    padding: 0px;
+    /*自定义边框*/
+    border: 0px;
+    /*消除默认点击蓝色边框效果*/
+    outline: none;
+}
   
 @keyframes bounceInLeft {
     0% {
@@ -70,6 +81,27 @@ body {
 
     100% {
         transform: none;
+    }
+}
+
+@keyframes menu {
+    00% {
+      opacity: 0;
+      height: 0;
+    }
+
+    5% {
+      opacity: 1;
+      height: 6rem;
+    }
+
+    99% {
+      opacity: 1;
+      height: 15.25rem;
+    }
+
+    100% {
+      height: auto;
     }
 }
 #app {}
