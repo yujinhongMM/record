@@ -13,10 +13,10 @@
         overflow: hidden;
         padding-top: 2rem;
         margin: auto;
-        @media (min-width: 992px) {
+        @media (min-width: @screen-width) {
             width: 90%;
         }
-        @media (max-width: 992px) {
+        @media (max-width: @screen-width) {
             width: 95%;
         }
     }

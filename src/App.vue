@@ -32,6 +32,6 @@
   <Main></Main>
 </template>
   
-<style scoped>
-
+<style>
+ 
 </style>

@@ -51,7 +51,7 @@ header {
   left: 0;
   z-index: 1030;
   background-color: #fff;
-  @media (max-width: 992px) {
+  @media (max-width: @screen-width) {
     position: relative;
   }
   h2 {
@@ -77,7 +77,7 @@ header {
         }
       }
     }
-    @media (max-width: 992px) {
+    @media (max-width: @screen-width) {
       display: none;
       position: absolute;
       background: #fff;
@@ -97,18 +97,18 @@ header {
     width: 2rem;
     height: 2rem;
     margin: 1rem 0;
-    @media (max-width: 992px) {
+    @media (max-width: @screen-width) {
       display: block;
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: @screen-width) {
     width: 90%;
   }
-  @media (max-width: 992px) {
+  @media (max-width: @screen-width) {
     width: 95%;
   }
   .show {
-    @media (max-width: 992px) {
+    @media (max-width: @screen-width) {
       display: block;
       overflow: hidden;
       animation: show 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;

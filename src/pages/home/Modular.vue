@@ -1,15 +1,16 @@
 <script setup lang="ts">
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, Ref } from 'vue';
     import request from '@/service/request.ts';
     import Icon0SVG from '@/assets/svg/icon0.vue';
     import Icon1SVG from '@/assets/svg/icon1.vue';
     import Rainbow from '@/assets/svg/rainbow.vue';
-    const list = ref([]);
+    import { ArticleInter } from '@/data/constant';
+    const list: Ref<ArticleInter[]> = ref([]);
     onMounted(async () => {
         const data = await request('/new/list', { method: 'GET', mode: 'cors'  });
         list.value = data;
     })
-</script>list
+</script>
     
 <template>
     <div class="modular">
@@ -42,7 +43,7 @@
         margin: 2.5rem auto;
         .left {
             width: 30%;
-            @media (max-width: 992px) {
+            @media (max-width: @screen-width) {
                 display: none;
             }
         }
@@ -50,10 +51,10 @@
             display: flex;
             flex-wrap: wrap;
             align-content: space-between;
-            @media (min-width: 992px) {
+            @media (min-width: @screen-width) {
                 width: 65%;
             }
-            @media (max-width: 992px) {
+            @media (max-width: @screen-width) {
                 width: 100%;
             }
             .tab {
@@ -80,18 +81,18 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                @media (max-width: 992px) {
+                @media (max-width: @screen-width) {
                     margin-bottom: 1rem;
                     &:last-child {
                         margin-bottom: 0;
                     }
                 }
                 img {
-                    @media (min-width: 992px) {
+                    @media (min-width: @screen-width) {
                         width: 25%;
                         height: 8rem;
                     }
-                    @media (max-width: 992px) {
+                    @media (max-width: @screen-width) {
                        display: none;
                     }
                 }
@@ -99,10 +100,10 @@
                     display: flex;
                     flex-wrap: wrap;
                     align-items: flex-start;
-                    @media (min-width: 992px) {
+                    @media (min-width: @screen-width) {
                         width: 70%;
                     }
-                    @media (max-width: 992px) {
+                    @media (max-width: @screen-width) {
                         width: 100%;
                     }
                     .title {
@@ -111,10 +112,10 @@
                         align-items: center;
                         justify-content: space-between;
                         .icon {
-                            @media (min-width: 992px) {
+                            @media (min-width: @screen-width) {
                                 display: none;
                             }
-                            @media (max-width: 992px) {
+                            @media (max-width: @screen-width) {
                                 display: block;
                                 width: 15%;
                             }
@@ -126,7 +127,7 @@
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
-                            @media (max-width: 992px) {
+                            @media (max-width: @screen-width) {
                                 width: 88%;
                             }
                         }

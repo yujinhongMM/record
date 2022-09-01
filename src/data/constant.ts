@@ -42,6 +42,18 @@ export enum ArticleType {
     Bug
 }
 /**
+ * ArticleInter 文章内容
+ */
+ export interface ArticleInter {
+    id: string | number
+    url: string
+    title: string
+    desc: string
+    time: string
+    author: string
+    [propName: string]: any
+}
+/**
  * 初始化值
  */
 export interface GlobalDataInter {
