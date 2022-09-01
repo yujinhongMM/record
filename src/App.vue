@@ -2,6 +2,7 @@
   import { provide, ref, onMounted, reactive, watch  } from 'vue';
   import Main from '@/layout/Main.vue';
   import Header from '@/layout/Header.vue';
+  import Footer from '@/layout/Footer.vue';
   import request from '@/service/request.ts';
   import LANG from '@/assets/lang';
   import { globalKey, langKey } from '@/data/symbol.ts';
@@ -30,6 +31,8 @@
 <template>
   <Header></Header>
   <Main></Main>
+  <Footer></Footer>
+  
 </template>
   
 <style>

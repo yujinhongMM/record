@@ -11,7 +11,7 @@
 <style lang='less' scoped>
     .main {
         overflow: hidden;
-        padding-top: 2rem;
+        padding: 2rem 0 6rem;
         margin: auto;
         @media (min-width: @screen-width) {
             width: 90%;

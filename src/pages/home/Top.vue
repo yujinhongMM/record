@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import { inject } from 'vue';
+    import BannerSVG from '@/assets/svg/banner.vue';
     import Button from '@/components/Button.vue';
     import { GlobalDataInter } from '@/data/constant';
     import { langKey, globalKey } from '@/data/symbol';
@@ -9,6 +10,7 @@
 
 <template>
     <div class="content">
+        <BannerSVG class="banner"/>
         <div class="left">
             <span class="title">
                 {{globalValue?.configTop?.title}}
@@ -24,10 +26,26 @@
   
 <style lang='less' scoped>
     .content {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: #e8f3ec;
+        .banner {
+            @media (min-width: @screen-width) {
+               display: none;
+            }
+            @media (max-width: @screen-width) {
+               display: block;
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               z-index: -1;
+               opacity: 0.5;
+            }
+        }
         .left {
             padding: 0 4% 1rem 8%;
             .title {
@@ -42,7 +60,13 @@
             }
         }
         .right {
-            max-width: 50%;
+            @media (min-width: @screen-width) {
+                display: block;
+                max-width: 50%;
+            }
+            @media (max-width: @screen-width) {
+               display: none;
+            }
         }
     }
 </style>

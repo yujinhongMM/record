@@ -13,6 +13,7 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: "思源宋体 CN VF Regular", "Source Sans Pro", "Segoe UI", "Helvetica Neue", "Arial";
     font-size: 1rem;
     font-weight: 400;
@@ -20,6 +21,7 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff; 
+    position: relative;
 }
   
 @keyframes bounceInLeft {
