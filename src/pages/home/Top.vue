@@ -33,15 +33,15 @@
         align-items: center;
         background-color: #e8f3ecc3;
         margin: auto;
-        @media (max-width: @screen-width2) {
+        @media (max-width: @screen-width) {
             width: 95vw;
             height: 95vw;
         }
         .banner {
-            @media (min-width: @screen-width2) {
+            @media (min-width: @screen-width) {
                display: none;
             }
-            @media (max-width: @screen-width2) {
+            @media (max-width: @screen-width) {
                display: block;
                position: absolute;
                top: 0;
@@ -65,11 +65,11 @@
             }
         }
         .right {
-            @media (min-width: @screen-width2) {
+            @media (min-width: @screen-width) {
                 display: block;
                 max-width: 50%;
             }
-            @media (max-width: @screen-width2) {
+            @media (max-width: @screen-width) {
                display: none;
             }
         }

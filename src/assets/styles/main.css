@@ -93,8 +93,8 @@ button{
     }
 }
 
-@keyframes menu {
-    00% {
+@keyframes menushow {
+    0% {
       opacity: 0;
       height: 0;
     }
@@ -111,6 +111,26 @@ button{
 
     100% {
       height: auto;
+    }
+}
+@keyframes menuhidden {
+    0% {
+        height: auto;
+    }
+
+    5% {
+        opacity: 1;
+        height: 15.25rem;
+    }
+
+    99% {
+        opacity: 1;
+        height: 6rem;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
     }
 }
 #app {}

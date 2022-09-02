@@ -6,7 +6,7 @@
   import MenuSVG from '@/assets/svg/menu.vue';
   const globalValue = inject<GlobalDataInter>(globalKey);
   const langValue = inject<object>(langKey);
-  const menuClass = ref('');
+  const menuClass = ref('hidden');
   const changeTheme = () => {
     globalValue.value.theme = globalValue.value.theme === Theme.Light ? Theme.Dark :  Theme.Light;
   }
@@ -14,7 +14,7 @@
     globalValue.value.language = globalValue.value.language === Language.CN ? Language.EN : Language.CN;
   }
   const menu = () => {
-    menuClass.value = menuClass.value ? '' : 'show';
+    menuClass.value = menuClass.value === 'hidden' ? 'show' : 'hidden';
   }
   
 </script>
@@ -116,7 +116,21 @@ header {
       @media (max-width: @screen-width) {
         display: block;
         overflow: hidden;
-        animation: menu 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;
+        // 展开
+        max-height: 1000px;  // 尽可能大 不过满足最大高度即可
+        transition: max-height 1s ease-in;
+        -webkit-transform: max-height 1s ease-in;
+
+      }
+    }
+    .hidden {
+      @media (max-width: @screen-width) {
+        display: block;
+        max-height: 1000px;  // 尽可能大 不过满足最大高度即可
+        overflow: hidden;
+        transition: max-height 0.75s ease-out;
+        -webkit-transform: max-height 0.75s ease-out;
+        max-height: 0;
       }
     }
   }
