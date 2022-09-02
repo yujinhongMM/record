@@ -3,12 +3,13 @@
     import lottie from "lottie-web"; 
     const props = defineProps<{
         animationData: object
-        options: {
+        options?: {
             [propName: string]: any
         }
         [propName: string]: any
     }>()
     const animation = ref(null);
+    const { options = {} } = props;
     onMounted(async () => {
         startAnim()
     })
@@ -19,7 +20,7 @@
             loop: true,
             autoplay: true,
             animationData: props.animationData,
-            ...props.options
+            ...options
         });
     }
 </script>
