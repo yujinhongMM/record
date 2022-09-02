@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-export const BASE_URL = 'record'
+export const BASE_URL = 'record';
 // 配置路由
 const routes: Array<RouteRecordRaw> = [
     {
