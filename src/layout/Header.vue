@@ -24,11 +24,11 @@
       <div class="location">
         <h2>yujinhongMM</h2>
         <ul :class="menuClass">
-          <nav>
-            <li>{{ langValue?.['menu.home'] }}</li>
-            <li>{{ langValue?.['menu.englishStudy'] }}</li>
-            <li>{{ langValue?.['menu.componentWheel'] }}</li>
-            <li>{{ langValue?.['menu.bug'] }}</li>
+          <nav @click="menu">
+            <router-link to="/">{{ langValue?.['menu.home'] }}</router-link>
+            <router-link to="/classification/0">{{ langValue?.['menu.englishStudy'] }}</router-link>
+            <router-link to="/classification/1">{{ langValue?.['menu.componentWheel'] }}</router-link>
+            <router-link to="/classification/2">{{ langValue?.['menu.bug'] }}</router-link>
           </nav>
           <Button @click="changeLang" type="greenNoBorder" className="button">{{ langValue?.['button.languageChange'] }}</Button>
         </ul>
@@ -75,7 +75,7 @@ header {
       flex: 1;
       nav {
         display: flex;
-        li {
+        a {
           display: block;
           padding: 0.8rem 1rem;
           color: #6c757d;
