@@ -184,7 +184,8 @@
 
 </template>
 
-<style type="text/css" scoped>.st0{fill:#FEA92E;stroke:#6A3906;stroke-width:6;stroke-miterlimit:10;}
+<style type="text/css" scoped>
+	.st0{fill:#FEA92E;stroke:#6A3906;stroke-width:6;stroke-miterlimit:10;}
 	.st0{fill:#70CE49;stroke:#6A3906;stroke-width:6;stroke-miterlimit:10;}
 	.st1{fill:#22AC38;stroke:#6A3906;stroke-width:6;stroke-miterlimit:10;}
 	.st2{fill:#006934;stroke:#6A3906;stroke-width:6;stroke-miterlimit:10;}
