@@ -25,10 +25,10 @@
         <h2>yujinhongMM</h2>
         <ul :class="menuClass">
           <nav @click="menu">
-            <router-link to="/">{{ langValue?.['menu.home'] }}</router-link>
-            <router-link to="/classification/0">{{ langValue?.['menu.englishStudy'] }}</router-link>
-            <router-link to="/classification/1">{{ langValue?.['menu.componentWheel'] }}</router-link>
-            <router-link to="/classification/2">{{ langValue?.['menu.bug'] }}</router-link>
+            <router-link to="/record">{{ langValue?.['menu.home'] }}</router-link>
+            <router-link to="/record/classification/0">{{ langValue?.['menu.englishStudy'] }}</router-link>
+            <router-link to="/record/classification/1">{{ langValue?.['menu.componentWheel'] }}</router-link>
+            <router-link to="/record/classification/2">{{ langValue?.['menu.bug'] }}</router-link>
           </nav>
           <Button @click="changeLang" type="greenNoBorder" className="button">{{ langValue?.['button.languageChange'] }}</Button>
         </ul>
