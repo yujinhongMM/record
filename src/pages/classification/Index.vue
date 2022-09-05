@@ -1,8 +1,9 @@
 <script setup lang="ts">
+    import List from './List.vue'
 </script>
 
 <template>
-    fffff
+    <List />
 </template>
     
 <style lang='less' scoped>

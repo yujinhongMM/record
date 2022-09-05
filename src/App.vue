@@ -27,7 +27,6 @@
   })
 
   window.addEventListener('load', () => {
-    console.log("🚀 ~ file: App.vue ~ line 31 ~ window.addEventListener ~ load")
     show.value = true
   })
   
